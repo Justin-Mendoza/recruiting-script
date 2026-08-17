@@ -104,59 +104,37 @@ The system SHALL accept only company-domain professional addresses with a curren
 - **WHEN** it is normalized
 - **THEN** the system discards those fields and does not persist or display them
 
-### Requirement: Plan-aware credit preflight and budget
+### Requirement: Monthly-quota preflight
 
-The system SHALL support Hunter's unified-credit free/all-in-one model and the Data Platform model with separate Search and Verification pools and a distinct billing period. Before a credit-consuming batch, it SHALL classify each contact as cache hit, verifier lookup, finder lookup, unresolved-domain lookup, or blocked. It SHALL show planned calls, a conservative estimate against the appropriate configured pool or pools, remaining budget and expiration, and contacts that would exceed budget. It SHALL require explicit approval.
+The system SHALL store the user's Hunter monthly plan limits for searches and verifications and the billing reset date. Before a credit-consuming batch, it SHALL classify each contact as cache hit, verifier lookup, finder lookup, unresolved-domain lookup, or blocked. It SHALL show planned searches, planned verifications, remaining monthly quota for each, and contacts that would exceed quota. It SHALL require explicit approval.
 
-#### Scenario: Batch fits the budget
+#### Scenario: Batch fits the monthly quota
 
-- **GIVEN** the estimated maximum consumption is within every applicable configured credit pool
+- **GIVEN** the planned searches and verifications are within the remaining monthly quota
 - **WHEN** the user approves the preflight
-- **THEN** the system executes only the approved calls and records actual observed usage where available
+- **THEN** the system executes only the approved calls and records actual observed usage
 
-#### Scenario: Batch exceeds the budget
+#### Scenario: Batch exceeds the monthly quota
 
-- **GIVEN** the approved batch would exceed a unified, Search, or Verification budget
+- **GIVEN** the planned batch would exceed the remaining monthly searches or verifications
 - **WHEN** preflight runs
-- **THEN** the system does not begin lookups and offers to reduce or reroute the batch or update the budget after the user changes their Hunter plan or purchase
-
-#### Scenario: Data Platform verification pool is exhausted
-
-- **GIVEN** Search credits remain but the configured Verification pool cannot cover registry-derived verifier calls
-- **WHEN** preflight runs
-- **THEN** the system reports the separate shortfall and MUST NOT silently spend Search credits as though the pools were interchangeable
-
-#### Scenario: Hunter pricing changes
-
-- **GIVEN** configured endpoint credit costs may be stale
-- **WHEN** a cost estimate is shown
-- **THEN** the system identifies it as an estimate, displays the configuration date, and directs the user to confirm current Hunter billing
+- **THEN** the system identifies which contacts fit and which would exceed quota, and offers to process only the contacts that fit or wait until the next billing reset
 
 ### Requirement: Resolution cache
 
-The system SHALL cache confirmed domains, verified professional-address results, resolution routes, source metadata, and timestamps. Repeated resolution within the configured freshness window SHALL reuse a valid cached result without consuming credits.
+The system SHALL cache confirmed domains, verified professional-address results, resolution routes, source metadata, and timestamps. Repeated resolution within the configured freshness window SHALL reuse a cached result without consuming monthly quota.
 
 #### Scenario: Reuse a current result
 
 - **GIVEN** the same normalized person and company domain have a current valid cached resolution
 - **WHEN** another campaign requests resolution
-- **THEN** the system reuses the result and reports zero planned Hunter credits for that contact
+- **THEN** the system reuses the result and reports zero planned Hunter calls for that contact
 
 #### Scenario: Cached result is stale
 
 - **GIVEN** a cached address exceeds the configured freshness period
 - **WHEN** resolution is requested
-- **THEN** the system includes revalidation in the credit preflight
-
-### Requirement: Free and paid plan compatibility
-
-The system SHALL use the same Hunter adapter and resolution behavior for free and paid plans. Plan changes SHALL affect only configured credit budget and provider-side quota, not application code or stored contact semantics.
-
-#### Scenario: Upgrade after exhausting free credits
-
-- **GIVEN** the user upgrades Hunter or buys Data Platform credits and increases the applicable configured pool budget
-- **WHEN** a previously blocked batch is preflighted again
-- **THEN** the system can process it without migration or code changes
+- **THEN** the system includes revalidation in the preflight quota estimate
 
 ### Requirement: No person discovery or LinkedIn dependency
 
