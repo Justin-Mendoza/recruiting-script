@@ -1,0 +1,13 @@
+{
+  "folders": [
+	{
+		"name": "recruiting-script",
+		"path": "../.."
+	},
+	{
+		"name": "specs",
+		"path": "../../../Downloads/recruiting-outreach-assistant/specs"
+	}
+],
+  "settings": {}
+}

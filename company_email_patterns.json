@@ -1,0 +1,2571 @@
+{
+  "version": 7,
+  "generated_at": "2026-08-16",
+  "record_count": 129,
+  "methodology": {
+    "summary": "Patterns are aggregated from third-party email-pattern/lead-generation tools (RocketReach, LeadIQ, SignalHire, ContactOut, AeroLeads, NeverBounce, Mailsfinder, Clay, and similar), plus occasional first-person forum reports (Blind, Glassdoor, Quora). This is NOT verification against actual known employee mailboxes -- no individual address was tested for deliverability.",
+    "confidence_scale": {
+      "high": "Most or all independent tools checked agree on the same dominant pattern, generally with consistent reported prevalence.",
+      "medium": "A plausible primary pattern exists but sources disagree meaningfully, or only one or two sources were available.",
+      "low": "Sources disagree substantially on the dominant pattern, or there is direct evidence the company does not enforce a single format."
+    },
+    "important_caveats": [
+      "These lead-gen tools frequently disagree with each other about the SAME company's dominant pattern -- sometimes by 40+ percentage points, or naming an entirely different pattern as #1. This is a limitation of the whole industry, not unique to this dataset.",
+      "Large companies commonly run multiple valid formats simultaneously (legacy aliases, acquired-company domains, regional differences, employee-chosen aliases), so a 'dominant' pattern is a probability, not a guarantee for any individual.",
+      "None of these have been confirmed by Anthropic or Claude against a real, currently-working mailbox. Treat every entry as a well-sourced guess, not a verified fact.",
+      "This data should not be used to construct bulk/mass outreach to individuals who have not consented to contact. Guessed-address spam has a high wrong-person/bounce rate and, more importantly, reaches people who never opted in."
+    ]
+  },
+  "companies": {
+    "google": {
+      "display_name": "Google (Alphabet Inc.)",
+      "aliases": [
+        "Google",
+        "Alphabet"
+      ],
+      "email_domains": [
+        {
+          "domain": "google.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "low",
+          "source_urls": [
+            "https://addtocrm.com/email-format/google",
+            "https://www.signalhire.com/overview/google-24977737/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Lead-gen tools disagree sharply: figures found range from firstinitial+last (77.5%) to firstinitial.last-with-dot (85%) to lastname_first (27%) to FLast (56%). Treat as genuinely uncertain; individual usernames at Google are known to vary a lot."
+        }
+      ]
+    },
+    "amazon": {
+      "display_name": "Amazon.com, Inc.",
+      "aliases": [
+        "Amazon",
+        "AWS"
+      ],
+      "email_domains": [
+        {
+          "domain": "amazon.com",
+          "pattern": "{first}{last_initial}",
+          "confidence": "low",
+          "source_urls": [
+            "https://rocketreach.co/amazon-email-format_b77cd255c53226d9",
+            "https://leadiq.com/c/amazon/5a1d8aa4240000240064842a/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Major cross-tool disagreement (reported dominant pattern share ranges from 26% to 70% depending on source, and the actual pattern named differs too). Amazon is huge with many sub-orgs (retail, AWS, etc.) which likely each have their own convention."
+        }
+      ]
+    },
+    "meta": {
+      "display_name": "Meta Platforms, Inc.",
+      "aliases": [
+        "Meta",
+        "Facebook"
+      ],
+      "email_domains": [
+        {
+          "domain": "meta.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/meta-email-format_b5c63079f42e0c5e",
+            "https://www.signalhire.com/companies/meta/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "first.last and firstinitial+last are both commonly reported; a Glassdoor employee thread describes formats as inconsistent across the company (\"There's no . or _, some use full name, some use initials\")."
+        }
+      ]
+    },
+    "apple": {
+      "display_name": "Apple Inc.",
+      "aliases": [
+        "Apple"
+      ],
+      "email_domains": [
+        {
+          "domain": "apple.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "low",
+          "source_urls": [
+            "https://www.signalhire.com/overview/apple/email-format",
+            "https://www.teamblind.com/post/apple-email-format-xdv5e63r"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Multiple Blind threads from people describing contact with Apple recruiters/employees indicate there is no single enforced format -- employees can request custom aliases. Lead-gen tools show a scattered set of patterns with no clear majority (~36-45% for the top pattern, varies by source)."
+        }
+      ]
+    },
+    "netflix": {
+      "display_name": "Netflix, Inc.",
+      "aliases": [
+        "Netflix"
+      ],
+      "email_domains": [
+        {
+          "domain": "netflix.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://addtocrm.com/email-format/netflix",
+            "https://rocketreach.co/netflix-email-format_b5c49cf4f42e0dc5"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Good convergence across many independent tools (reported share for this pattern ranges ~65-95%)."
+        }
+      ]
+    },
+    "microsoft": {
+      "display_name": "Microsoft Corporation",
+      "aliases": [
+        "Microsoft",
+        "MSFT"
+      ],
+      "email_domains": [
+        {
+          "domain": "microsoft.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://aeroleads.com/company/microsoft-email-format",
+            "https://leadiq.com/c/microsoft/5a1d8aac2400002400649f34/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "first.last is the most frequently cited pattern, though one tool reports first+lastinitial as dominant instead. A Quora answer from a former employee describes an older, name-collision-based alias convention (e.g. 'ShawnBa'), suggesting real historical variation."
+        }
+      ]
+    },
+    "nvidia": {
+      "display_name": "NVIDIA Corporation",
+      "aliases": [
+        "Nvidia",
+        "NVIDIA"
+      ],
+      "email_domains": [
+        {
+          "domain": "nvidia.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/nvidia-email-format_b5c617caf42e0c4c",
+            "https://addtocrm.com/email-format/nvidia"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across independent tools (reported share ~59-94%)."
+        }
+      ]
+    },
+    "oracle": {
+      "display_name": "Oracle Corporation",
+      "aliases": [
+        "Oracle"
+      ],
+      "email_domains": [
+        {
+          "domain": "oracle.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/oracle-email-format_b5c61dd6f42e0c4b",
+            "https://leadiq.com/c/oracle/5a1d8aa62400002400648a4a/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong, consistent convergence across many independent tools (reported share ~88-98%)."
+        }
+      ]
+    },
+    "salesforce": {
+      "display_name": "Salesforce, Inc.",
+      "aliases": [
+        "Salesforce"
+      ],
+      "email_domains": [
+        {
+          "domain": "salesforce.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/salesforce-email-format_b5c615a3f42e0c4d",
+            "https://addtocrm.com/email-format/salesforce"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Reasonable convergence on firstinitial+last across most tools (~59-87%), though one source reports a lastname-based pattern instead."
+        }
+      ]
+    },
+    "adobe": {
+      "display_name": "Adobe Inc.",
+      "aliases": [
+        "Adobe"
+      ],
+      "email_domains": [
+        {
+          "domain": "adobe.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://skrapp.io/directory/company/adobe.com",
+            "https://leadiq.com/c/adobe/5a1d8a7b240000240063fd9a/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Split between firstinitial+last and first.last as the reported top pattern depending on source; no single figure dominates."
+        }
+      ]
+    },
+    "ibm": {
+      "display_name": "IBM Corporation",
+      "aliases": [
+        "IBM",
+        "International Business Machines"
+      ],
+      "email_domains": [
+        {
+          "domain": "ibm.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/ibm-email-format_b5c61a23f42e0c4b",
+            "https://mailmo.io/email-patterns/email-address-format-of-ibm"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "first.last is the most frequently cited pattern across several tools, though IBM is reported to use up to 18 distinct formats company-wide (large legacy org with many business units)."
+        }
+      ]
+    },
+    "stripe": {
+      "display_name": "Stripe, Inc.",
+      "aliases": [
+        "Stripe"
+      ],
+      "email_domains": [
+        {
+          "domain": "stripe.com",
+          "pattern": "{first}",
+          "confidence": "high",
+          "source_urls": [
+            "https://contactout.com/company/stripe-email-format-6491557",
+            "https://aeroleads.com/company/stripe-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong, consistent convergence: first-name-only is the dominant pattern across nearly every independent source checked."
+        }
+      ]
+    },
+    "airbnb": {
+      "display_name": "Airbnb, Inc.",
+      "aliases": [
+        "Airbnb"
+      ],
+      "email_domains": [
+        {
+          "domain": "airbnb.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://leadiq.com/c/airbnb/5a1d95ba2300005200846776/email-format",
+            "https://skrapp.io/directory/company/airbnb.com"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong convergence across essentially all sources checked (reported share ~71-99%)."
+        }
+      ]
+    },
+    "uber": {
+      "display_name": "Uber Technologies, Inc.",
+      "aliases": [
+        "Uber"
+      ],
+      "email_domains": [
+        {
+          "domain": "uber.com",
+          "pattern": "{first}{last_initial}",
+          "confidence": "low",
+          "source_urls": [
+            "https://leadiq.com/c/uber/5a1d8a76240000240063eee9/email-format",
+            "https://mailmo.io/email-patterns/email-address-format-of-uber"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only limited, conflicting data found this session (one source reports first+last with no separator, another reports first+lastinitial as dominant). Treat as a rough guess pending more sourcing."
+        }
+      ]
+    },
+    "databricks": {
+      "display_name": "Databricks, Inc.",
+      "aliases": [
+        "Databricks"
+      ],
+      "email_domains": [
+        {
+          "domain": "databricks.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/databricks-email-format_b5f309c0f42d3413",
+            "https://leadiq.com/c/databricks/5a1d8a972400002400645952/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most independent tools (~75-92%); one tool (SignalHire) reports a different dominant pattern."
+        }
+      ]
+    },
+    "palantir": {
+      "display_name": "Palantir Technologies Inc.",
+      "aliases": [
+        "Palantir"
+      ],
+      "email_domains": [
+        {
+          "domain": "palantir.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://addtocrm.com/email-format/palantir",
+            "https://contactout.com/company/Palantir-Technologies-email-format-91056"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most tools (~76-100%), though a couple of sources report a first_last or first.last variant instead."
+        }
+      ]
+    },
+    "snowflake": {
+      "display_name": "Snowflake Inc.",
+      "aliases": [
+        "Snowflake"
+      ],
+      "email_domains": [
+        {
+          "domain": "snowflake.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://leadiq.com/c/snowflake/5a1d8a6d240000240063d0f2/email-format",
+            "https://derrick-app.com/company/snowflake/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong, consistent convergence across independent tools (reported share ~79-97%). Ignore any results referencing snowflake.net / snowflakefdb.com -- those appear to be stale or unrelated entity matches."
+        }
+      ]
+    },
+    "coinbase": {
+      "display_name": "Coinbase Global, Inc.",
+      "aliases": [
+        "Coinbase"
+      ],
+      "email_domains": [
+        {
+          "domain": "coinbase.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://leadiq.com/c/coinbase/5a1d8a68240000240063bfff/email-format",
+            "https://rocketreach.co/coinbase-email-format_b5ed8370f42e7f7d"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong convergence across independent tools (reported share ~85-92%)."
+        }
+      ]
+    },
+    "robinhood": {
+      "display_name": "Robinhood Markets, Inc.",
+      "aliases": [
+        "Robinhood"
+      ],
+      "email_domains": [
+        {
+          "domain": "robinhood.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/robinhood-email-format_b5f7be25f42edfe1",
+            "https://www.neverbounce.com/company/robinhood/371804974"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across the tools checked (reported share ~69-88%)."
+        }
+      ]
+    },
+    "notion": {
+      "display_name": "Notion Labs, Inc.",
+      "aliases": [
+        "Notion"
+      ],
+      "email_domains": [
+        {
+          "domain": "makenotion.com",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://leadiq.com/c/notion/5a1d9d042300005b008cdb02/email-format",
+            "https://www.clay.com/dossier/notion-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Corporate domain is makenotion.com, not notion.so. Sources split between first-name-only and firstinitial+last; first-only appears somewhat more often and matches Notion's small/flat headcount at time of most reports."
+        }
+      ]
+    },
+    "figma": {
+      "display_name": "Figma, Inc.",
+      "aliases": [
+        "Figma"
+      ],
+      "email_domains": [
+        {
+          "domain": "figma.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/figma-email-format_b5f1aa14f6b3a5a6",
+            "https://contactout.com/company/Figma-email-format-73357"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Reasonable convergence on firstinitial+last (~75-88%) across a couple of tools, though others report first-only or first.last as dominant."
+        }
+      ]
+    },
+    "datadog": {
+      "display_name": "Datadog, Inc.",
+      "aliases": [
+        "Datadog"
+      ],
+      "email_domains": [
+        {
+          "domain": "datadoghq.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/datadog-email-format_b5d65c18f42e322e",
+            "https://leadiq.com/c/datadog/5a1d8a66240000240063bbbe/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong, consistent convergence across nearly every source checked (reported share ~76-96%). Note domain is datadoghq.com."
+        }
+      ]
+    },
+    "atlassian": {
+      "display_name": "Atlassian Corporation",
+      "aliases": [
+        "Atlassian"
+      ],
+      "email_domains": [
+        {
+          "domain": "atlassian.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://aeroleads.com/company/atlassian-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one strong independent data point found this session (~99% reported); would benefit from cross-checking against another tool before treating as high-confidence."
+        }
+      ]
+    },
+    "mongodb": {
+      "display_name": "MongoDB, Inc.",
+      "aliases": [
+        "MongoDB"
+      ],
+      "email_domains": [
+        {
+          "domain": "mongodb.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/mongodb-email-format_b5cded29f42e0ba5",
+            "https://leadiq.com/c/mongodb/5a1d92b154000052007762b3/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong convergence across independent tools (reported share ~88-95%)."
+        }
+      ]
+    },
+    "cloudflare": {
+      "display_name": "Cloudflare, Inc.",
+      "aliases": [
+        "Cloudflare"
+      ],
+      "email_domains": [
+        {
+          "domain": "cloudflare.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "low",
+          "source_urls": [
+            "https://rocketreach.co/cloudflare-email-format_b5c02f64f42e082c",
+            "https://leadiq.com/c/cloudflare/5a1d89cd240000240063253d/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Real disagreement across sources between firstinitial+last and first-name-only as the dominant pattern; no clear winner."
+        }
+      ]
+    },
+    "doordash": {
+      "display_name": "DoorDash, Inc.",
+      "aliases": [
+        "DoorDash"
+      ],
+      "email_domains": [
+        {
+          "domain": "doordash.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/doordash-email-format_b5f6f017f42e8f35",
+            "https://leadiq.com/c/doordash/5a1d885924000024006213db/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across the large majority of tools checked (reported share ~45-86%, with first.last as the top pattern in every source)."
+        }
+      ]
+    },
+    "servicenow": {
+      "display_name": "ServiceNow, Inc.",
+      "aliases": [
+        "ServiceNow"
+      ],
+      "email_domains": [
+        {
+          "domain": "servicenow.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://derrick-app.com/company/servicenow/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one clear independent source found this session; reasonable given it matches common enterprise-SaaS convention, but not cross-verified."
+        }
+      ]
+    },
+    "openai": {
+      "display_name": "OpenAI, Inc.",
+      "aliases": [
+        "OpenAI"
+      ],
+      "email_domains": [
+        {
+          "domain": "openai.com",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://addtocrm.com/email-format/openai",
+            "https://contactout.com/company/OpenAI-email-format-1314"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Several tools report first-name-only as dominant (73-100%), but a couple of others report different patterns -- OpenAI's headcount has grown quickly, which may mean older/newer employee data conflicts."
+        }
+      ]
+    },
+    "block": {
+      "display_name": "Block, Inc.",
+      "aliases": [
+        "Block",
+        "Square"
+      ],
+      "email_domains": [
+        {
+          "domain": "block.xyz",
+          "pattern": "{first_initial}{last}",
+          "confidence": "low",
+          "source_urls": [
+            "https://www.clay.com/dossier/block-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one source found this session. Block was formerly Square, Inc.; older contacts or job posts may still reference squareup.com."
+        }
+      ]
+    },
+    "zoom": {
+      "display_name": "Zoom Communications, Inc.",
+      "aliases": [
+        "Zoom",
+        "Zoom Video Communications"
+      ],
+      "email_domains": [
+        {
+          "domain": "zoom.us",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://leadiq.com/c/zoom/5a1d853224000024005fc365/email-format",
+            "https://addtocrm.com/email-format/zoom"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across sources (reported share ~51-99%). Note the domain is zoom.us, not zoom.com."
+        }
+      ]
+    },
+    "workday": {
+      "display_name": "Workday, Inc.",
+      "aliases": [
+        "Workday"
+      ],
+      "email_domains": [
+        {
+          "domain": "workday.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/workday-email-format_b5c65ce5f42e0cad",
+            "https://aeroleads.com/company/workday-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong convergence (reported share ~96-99%)."
+        }
+      ]
+    },
+    "shopify": {
+      "display_name": "Shopify Inc.",
+      "aliases": [
+        "Shopify"
+      ],
+      "email_domains": [
+        {
+          "domain": "shopify.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/shopify-email-format_b5cde0def42e0bab",
+            "https://leadiq.com/c/shopify/5a1d7e75240000240058a6b8/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across sources (reported share ~83-97%)."
+        }
+      ]
+    },
+    "hubspot": {
+      "display_name": "HubSpot, Inc.",
+      "aliases": [
+        "HubSpot"
+      ],
+      "email_domains": [
+        {
+          "domain": "hubspot.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://leadiq.com/c/hubspot/5a1d94775400005300785d2a/email-format",
+            "https://addtocrm.com/email-format/hubspot"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Split between firstinitial+last and first.last as the reported dominant pattern depending on source."
+        }
+      ]
+    },
+    "reddit": {
+      "display_name": "Reddit, Inc.",
+      "aliases": [
+        "Reddit"
+      ],
+      "email_domains": [
+        {
+          "domain": "reddit.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/reddit-inc-email-format_b5c455fff42e0dec",
+            "https://addtocrm.com/email-format/reddit"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Reasonable convergence across a few sources (reported share ~75-88%)."
+        }
+      ]
+    },
+    "pinterest": {
+      "display_name": "Pinterest, Inc.",
+      "aliases": [
+        "Pinterest"
+      ],
+      "email_domains": [
+        {
+          "domain": "pinterest.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/pinterest-email-format_b5d73ef1f42e3c5e",
+            "https://www.clay.com/dossier/pinterest-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Firstinitial+last is cited most often, but with meaningfully lower/conflicting percentages across sources (43-67%) and a couple of tools favoring first-only instead."
+        }
+      ]
+    },
+    "twilio": {
+      "display_name": "Twilio Inc.",
+      "aliases": [
+        "Twilio"
+      ],
+      "email_domains": [
+        {
+          "domain": "twilio.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "low",
+          "source_urls": [
+            "https://rocketreach.co/twilio-email-format_b5c00542f42e0fdd",
+            "https://addtocrm.com/email-format/twilio"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Real disagreement across sources (firstinitial+last vs last+firstinitial vs first.last all reported as dominant by different tools)."
+        }
+      ]
+    },
+    "okta": {
+      "display_name": "Okta, Inc.",
+      "aliases": [
+        "Okta"
+      ],
+      "email_domains": [
+        {
+          "domain": "okta.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/okta-email-format_b5c8388bf42e347c"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Single strong source found this session (92%); not yet cross-verified against a second independent tool."
+        }
+      ]
+    },
+    "ramp": {
+      "display_name": "Ramp Business Corporation",
+      "aliases": [
+        "Ramp"
+      ],
+      "email_domains": [
+        {
+          "domain": "ramp.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://contactout.com/company/Ramp-email-format-2499",
+            "https://leadiq.com/c/ramp/5a1dc90c2300005400cd9009/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Several tools point to firstinitial+last (37-67%), though one (Mailsfinder) reports first.last as dominant instead. Watch out for unrelated same-named entities (rampgrp.com, rampecdn.com) showing up in searches -- this entry is specifically for the fintech Ramp at ramp.com."
+        }
+      ]
+    },
+    "harvey": {
+      "display_name": "Harvey (Counsel AI Corporation)",
+      "aliases": [
+        "Harvey",
+        "Harvey AI"
+      ],
+      "email_domains": [
+        {
+          "domain": "harvey.ai",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/harvey-email-format_b79c125bc5cb624a"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one independent source found this session (77.7% reported for first-name-only); reasonable given the company's small/legal-tech profile, but not cross-verified against a second tool."
+        }
+      ]
+    },
+    "brex": {
+      "display_name": "Brex, Inc.",
+      "aliases": [
+        "Brex"
+      ],
+      "email_domains": [
+        {
+          "domain": "brex.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/brex-email-format_b4476801fad27664",
+            "https://leadiq.com/c/brex/5ab059ec550000c300d33812/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Good convergence across the sources checked (~86% reported for this pattern in both)."
+        }
+      ]
+    },
+    "rippling": {
+      "display_name": "Rippling People Center, Inc.",
+      "aliases": [
+        "Rippling"
+      ],
+      "email_domains": [
+        {
+          "domain": "rippling.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/rippling-email-format_b4568029fca06fad",
+            "https://www.clay.com/dossier/rippling-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most tools checked (~61-100%)."
+        }
+      ]
+    },
+    "mercury": {
+      "display_name": "Mercury Technologies, Inc.",
+      "aliases": [
+        "Mercury",
+        "Mercury Bank"
+      ],
+      "email_domains": [
+        {
+          "domain": "mercury.com",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/mercury-email-format_b7ac0000c53b736f",
+            "https://leadiq.com/c/mercury/5d139deb2000009f017c0f0d/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Refers specifically to the fintech/banking-platform Mercury at mercury.com -- several unrelated companies share the name (Mercury Systems/mrcy.com, Mercury Insurance, Mercury engineering firms, Mercury NZ utility) with different domains and patterns, so double-check the domain before using."
+        }
+      ]
+    },
+    "deel": {
+      "display_name": "Deel, Inc.",
+      "aliases": [
+        "Deel"
+      ],
+      "email_domains": [
+        {
+          "domain": "deel.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/deel-email-format_b452cc53fc8c7e20"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one independent source found this session (93.1% reported); would benefit from cross-verification."
+        }
+      ]
+    },
+    "perplexity": {
+      "display_name": "Perplexity AI, Inc.",
+      "aliases": [
+        "Perplexity",
+        "Perplexity AI"
+      ],
+      "email_domains": [
+        {
+          "domain": "perplexity.ai",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/perplexity-ai-email-format_b7957aafc2467b1d",
+            "https://leadiq.com/c/perplexity/64357a96924b9e10446c0e66/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Two sources agree on first-name-only as dominant. Ignore results for perplexity.co.uk or similarly-named unrelated entities."
+        }
+      ]
+    },
+    "scaleai": {
+      "display_name": "Scale AI, Inc.",
+      "aliases": [
+        "Scale AI",
+        "Scale"
+      ],
+      "email_domains": [
+        {
+          "domain": "scale.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://leadiq.com/c/scale-ai/5a1d9d682300005c008d4069/email-format",
+            "https://www.clay.com/dossier/scale-ai-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "LeadIQ and Clay both point to first.last (~93%), but RocketReach/ContactOut/SignalHire report first-only or first+last-no-separator as dominant instead -- real disagreement across tools."
+        }
+      ]
+    },
+    "cursor": {
+      "display_name": "Anysphere, Inc. (Cursor)",
+      "aliases": [
+        "Cursor",
+        "Anysphere"
+      ],
+      "email_domains": [
+        {
+          "domain": "cursor.com",
+          "pattern": "{first}",
+          "confidence": "low",
+          "source_urls": [
+            "https://rocketreach.co/anysphere-email-format_b79fa83ac5dcde8e",
+            "https://leadiq.com/c/anysphere/63854243045fe421d69008c5/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Corporate entity is Anysphere, Inc.; product and current primary domain is cursor.com, but the lead-gen data found this session was indexed under the older cursor.so domain (first-name-only reported there). Treat the current cursor.com pattern as an educated guess pending fresh verification."
+        }
+      ]
+    },
+    "vercel": {
+      "display_name": "Vercel Inc.",
+      "aliases": [
+        "Vercel",
+        "ZEIT"
+      ],
+      "email_domains": [
+        {
+          "domain": "vercel.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://aeroleads.com/company/vercel-email-format",
+            "https://leadiq.com/c/vercel/5c5c52d61e0000d300e60583/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Reasonable convergence on first.last (~56-82%) across a couple of tools; one source (SignalHire) shows a different pattern, but that data appears to be filed under Vercel's former name 'Zeit' and may be stale."
+        }
+      ]
+    },
+    "sierraai": {
+      "display_name": "Sierra Technologies, Inc.",
+      "aliases": [
+        "Sierra",
+        "Sierra AI"
+      ],
+      "email_domains": [
+        {
+          "domain": "sierra.ai",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/sierra-email-format_b6c03b4bc79100db"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one independent source found this session (81.4% reported). Several unrelated companies also use 'Sierra' in their name (Sierra Labs, SIERA.AI, Sierra AI - Advanced Infrastructures) with different domains -- this entry is specifically for the customer-service AI company at sierra.ai."
+        }
+      ]
+    },
+    "cognition": {
+      "display_name": "Cognition AI, Inc.",
+      "aliases": [
+        "Cognition",
+        "Cognition Labs",
+        "Devin"
+      ],
+      "email_domains": [
+        {
+          "domain": "cognition.ai",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://www.clay.com/dossier/cognition-email-format",
+            "https://rocketreach.co/cognition-email-format_b739e2e3c7d4037f"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Two independent sources agree on first-name-only as dominant."
+        }
+      ]
+    },
+    "elevenlabs": {
+      "display_name": "ElevenLabs, Inc.",
+      "aliases": [
+        "ElevenLabs",
+        "Eleven Labs"
+      ],
+      "email_domains": [
+        {
+          "domain": "elevenlabs.io",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/elevenlabs-email-format_b79c9799c5c12627",
+            "https://www.clay.com/dossier/elevenlabs-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "RocketReach, Clay, and NeverBounce point to first-name-only as dominant, though ContactOut and LeadIQ report firstinitial+last or first.last instead -- moderate disagreement. Watch out for an unrelated Australian food company and a French dev shop that also use similar names/domains."
+        }
+      ]
+    },
+    "wiz": {
+      "display_name": "Wiz, Inc.",
+      "aliases": [
+        "Wiz"
+      ],
+      "email_domains": [
+        {
+          "domain": "wiz.io",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/wiz-email-format_b43da153c19cb69c"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one independent source found this session (90.2% reported). Note Wiz's ownership/status may be in transition given its announced acquisition by Google Cloud -- domain could change."
+        }
+      ]
+    },
+    "linear": {
+      "display_name": "Linear Orbit, Inc.",
+      "aliases": [
+        "Linear"
+      ],
+      "email_domains": [
+        {
+          "domain": "linear.app",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/linear-email-format_b40626b8fc2d513f"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one independent source found this session (89.7% reported first-name-only), consistent with Linear's small headcount."
+        }
+      ]
+    },
+    "retool": {
+      "display_name": "Retool, Inc.",
+      "aliases": [
+        "Retool"
+      ],
+      "email_domains": [
+        {
+          "domain": "retool.com",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://leadiq.com/c/retool/5cb183411d00006201a5bf46/email-format",
+            "https://www.clay.com/dossier/retool-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "LeadIQ, ContactOut, and Clay agree on first-name-only. One RocketReach result showed a different, likely outdated domain (tryretool.com) with a different pattern."
+        }
+      ]
+    },
+    "glean": {
+      "display_name": "Glean Technologies, Inc.",
+      "aliases": [
+        "Glean"
+      ],
+      "email_domains": [
+        {
+          "domain": "glean.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/glean-email-format_b7e9a003c2a849c8",
+            "https://leadiq.com/c/glean/6142f8b8df9ba4487f70cee2/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Good convergence on first.last across the sources checked (82-95%). Multiple unrelated companies also use 'Glean' branding (a note-taking app, glean.co) so double check the domain."
+        }
+      ]
+    },
+    "appliedintuition": {
+      "display_name": "Applied Intuition, Inc.",
+      "aliases": [
+        "Applied Intuition"
+      ],
+      "email_domains": [
+        {
+          "domain": "appliedintuition.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "low",
+          "source_urls": [
+            "https://leadiq.com/c/applied-intuition/5ba9ffff1e00001a9a56fb63/email-format",
+            "https://rocketreach.co/applied-intuition-email-format_b453f6e9fc84ce79"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "The company's own site is at appliedintuition.com, where LeadIQ reports FLast (firstinitial+last) as dominant (77%); however most lead-gen tools indexed a shorter applied.co domain instead, showing first-name-only or first.last as dominant there. Real uncertainty about which domain/pattern is current -- verify before relying on this."
+        }
+      ]
+    },
+    "navan": {
+      "display_name": "Navan, Inc.",
+      "aliases": [
+        "Navan",
+        "TripActions"
+      ],
+      "email_domains": [
+        {
+          "domain": "navan.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/navan-email-format_b79eebd4c5ed5d88"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one independent source for the correct navan.com domain (90.4% reported); a navan.co.uk result showed a different pattern but that may reflect a smaller regional subset. Navan (formerly TripActions) is now public (Nasdaq: NAVN)."
+        }
+      ]
+    },
+    "carta": {
+      "display_name": "Carta, Inc.",
+      "aliases": [
+        "Carta",
+        "eShares"
+      ],
+      "email_domains": [
+        {
+          "domain": "carta.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/carta-email-format_b440507cfdcce327",
+            "https://leadiq.com/c/carta/5a1d97312300005b0085c1bb/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across the sources checked (72-95%)."
+        }
+      ]
+    },
+    "airtable": {
+      "display_name": "Airtable, Inc.",
+      "aliases": [
+        "Airtable"
+      ],
+      "email_domains": [
+        {
+          "domain": "airtable.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/airtable-email-format_b5faf0dcf7a785a2",
+            "https://www.clay.com/dossier/airtable-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "RocketReach and Clay point to first.last (84%+), while a couple of other tools (AeroLeads, AddToCRM) report first-name-only as dominant instead -- moderate disagreement."
+        }
+      ]
+    },
+    "faire": {
+      "display_name": "Faire Wholesale, Inc.",
+      "aliases": [
+        "Faire"
+      ],
+      "email_domains": [
+        {
+          "domain": "faire.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/faire-email-format_b454cc3bfc937457",
+            "https://www.neverbounce.com/company/faire/355437661"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across the sources checked (76-90%)."
+        }
+      ]
+    },
+    "webflow": {
+      "display_name": "Webflow, Inc.",
+      "aliases": [
+        "Webflow"
+      ],
+      "email_domains": [
+        {
+          "domain": "webflow.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/webflow-email-format_b5f368c2f42d345f",
+            "https://leadiq.com/c/webflow/5a1d89f72400002400635403/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across the sources checked (83-93%)."
+        }
+      ]
+    },
+    "plaid": {
+      "display_name": "Plaid Inc.",
+      "aliases": [
+        "Plaid"
+      ],
+      "email_domains": [
+        {
+          "domain": "plaid.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/plaid-email-format_b5eeee93f42e7756",
+            "https://leadiq.com/c/plaid/5a1d98b72300005a00875a3b/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most sources checked (85-90%). Ignore unrelated same-named entities (Plaid LLC/beingplaid.com, PLAID creative agency)."
+        }
+      ]
+    },
+    "affirm": {
+      "display_name": "Affirm, Inc.",
+      "aliases": [
+        "Affirm"
+      ],
+      "email_domains": [
+        {
+          "domain": "affirm.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/affirm-email-format_b5eb2ee3f42e840f",
+            "https://contactout.com/company/affirm-inc-email-format-7122887"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence (83-85%). Bonus: Affirm's own careers site states it only emails candidates from @affirm.com or @us.greenhouse-mail.io -- useful for spotting recruiting scams."
+        }
+      ]
+    },
+    "chime": {
+      "display_name": "Chime Financial, Inc.",
+      "aliases": [
+        "Chime"
+      ],
+      "email_domains": [
+        {
+          "domain": "chime.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://leadiq.com/c/chime/5a1d9d682300005c008d404a/email-format",
+            "https://www.clay.com/dossier/chime-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "LeadIQ, NeverBounce, and Clay point to first.last (~64%+), though ContactOut and AeroLeads report firstinitial+last as dominant instead -- moderate disagreement."
+        }
+      ]
+    },
+    "marqeta": {
+      "display_name": "Marqeta, Inc.",
+      "aliases": [
+        "Marqeta"
+      ],
+      "email_domains": [
+        {
+          "domain": "marqeta.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/marqeta-email-format_b5c9a168f42e30b2",
+            "https://www.clay.com/dossier/marqeta-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong, unusually consistent convergence across essentially every source checked (91-100%)."
+        }
+      ]
+    },
+    "mistralai": {
+      "display_name": "Mistral AI",
+      "aliases": [
+        "Mistral",
+        "Mistral AI"
+      ],
+      "email_domains": [
+        {
+          "domain": "mistral.ai",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/mistral-ai-email-format_b79b0341c54b4500",
+            "https://leadiq.com/c/mistral-ai/64944a819447d289715f560c/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Two sources agree on first-name-only (64-93%)."
+        }
+      ]
+    },
+    "togetherai": {
+      "display_name": "Together AI",
+      "aliases": [
+        "Together AI",
+        "Together Computer"
+      ],
+      "email_domains": [
+        {
+          "domain": "together.ai",
+          "pattern": "{first}",
+          "confidence": "low",
+          "source_urls": [
+            "https://www.clay.com/dossier/together-ai-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one clean source found this session (Clay); another result referenced a different domain (together.group) that may be an unrelated or outdated entity. Small headcount means limited data either way."
+        }
+      ]
+    },
+    "huggingface": {
+      "display_name": "Hugging Face, Inc.",
+      "aliases": [
+        "Hugging Face",
+        "HF"
+      ],
+      "email_domains": [
+        {
+          "domain": "huggingface.co",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://www.clay.com/dossier/hugging-face-email-format",
+            "https://contactout.com/company/Hugging-Face-5333"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Good convergence on first-name-only (64-75%) across three independent tools."
+        }
+      ]
+    },
+    "xai": {
+      "display_name": "X.AI Corp.",
+      "aliases": [
+        "xAI"
+      ],
+      "email_domains": [
+        {
+          "domain": "x.ai",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/xai-email-format_b728cc94c43a03ef"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Two RocketReach snapshots agree on firstinitial+last (42-53%), though only one underlying tool was checked this session."
+        }
+      ]
+    },
+    "crowdstrike": {
+      "display_name": "CrowdStrike Holdings, Inc.",
+      "aliases": [
+        "CrowdStrike"
+      ],
+      "email_domains": [
+        {
+          "domain": "crowdstrike.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://addtocrm.com/email-format/crowdstrike",
+            "https://leadiq.com/c/crowdstrike/5a1d8a67240000240063bcd8/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong convergence across nearly every source checked (69-99%)."
+        }
+      ]
+    },
+    "hashicorp": {
+      "display_name": "HashiCorp, Inc.",
+      "aliases": [
+        "HashiCorp"
+      ],
+      "email_domains": [
+        {
+          "domain": "hashicorp.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://aeroleads.com/company/hashicorp-email-format",
+            "https://addtocrm.com/email-format/hashicorp"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Two sources agree on firstinitial+last (54-71%)."
+        }
+      ]
+    },
+    "rubrik": {
+      "display_name": "Rubrik, Inc.",
+      "aliases": [
+        "Rubrik"
+      ],
+      "email_domains": [
+        {
+          "domain": "rubrik.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/rubrik-email-format_b58fc2bff765f6c0",
+            "https://leadiq.com/c/rubrik/5a1d96702300005900851048/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence (93-94%). Rubrik is now public (NYSE: RBRK)."
+        }
+      ]
+    },
+    "confluent": {
+      "display_name": "Confluent, Inc.",
+      "aliases": [
+        "Confluent"
+      ],
+      "email_domains": [
+        {
+          "domain": "confluent.io",
+          "pattern": "{first_initial}{last}",
+          "confidence": "low",
+          "source_urls": [
+            "https://rocketreach.co/confluent-email-format_b5c742fbf42e0d19",
+            "https://leadiq.com/c/confluent/5a1d86f82400002400611935/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Real, substantial disagreement across sources: first-only, firstinitial+last, first.last, and firstname_lastinitial have each been reported as the dominant pattern by different tools. Treat this one as a low-confidence guess."
+        }
+      ]
+    },
+    "elastic": {
+      "display_name": "Elasticsearch B.V. (Elastic)",
+      "aliases": [
+        "Elastic"
+      ],
+      "email_domains": [
+        {
+          "domain": "elastic.co",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://addtocrm.com/email-format/elastic",
+            "https://leadiq.com/c/elastic/5a1d96702300005c00851039/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most sources (75-92%). Domain is elastic.co -- ignore elastic.com/elasticsearch.com results, which appear to be unrelated or stale entries."
+        }
+      ]
+    },
+    "samsara": {
+      "display_name": "Samsara Inc.",
+      "aliases": [
+        "Samsara"
+      ],
+      "email_domains": [
+        {
+          "domain": "samsara.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://leadiq.com/c/samsara/5a1d9412540000540078396e/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one independent source found this session (85% reported); not cross-verified."
+        }
+      ]
+    },
+    "verkada": {
+      "display_name": "Verkada Inc.",
+      "aliases": [
+        "Verkada"
+      ],
+      "email_domains": [
+        {
+          "domain": "verkada.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://aeroleads.com/company/verkada-email-format",
+            "https://leadiq.com/c/verkada/5a1dbc8a2300005200bab8e7/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong convergence across every source checked (90-97%)."
+        }
+      ]
+    },
+    "pagerduty": {
+      "display_name": "PagerDuty, Inc.",
+      "aliases": [
+        "PagerDuty"
+      ],
+      "email_domains": [
+        {
+          "domain": "pagerduty.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/PagerDuty-email-format_482819",
+            "https://leadiq.com/c/pagerduty/5a1d8a67240000240063bcc2/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most sources checked (81-90%)."
+        }
+      ]
+    },
+    "github": {
+      "display_name": "GitHub, Inc.",
+      "aliases": [
+        "GitHub"
+      ],
+      "email_domains": [
+        {
+          "domain": "github.com",
+          "pattern": "{first}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://leadiq.com/c/github/5a1d85ff24000024006064fd/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one clean independent source found this session (60% reported for no-separator first+last). GitHub is Microsoft-owned but keeps its own domain."
+        }
+      ]
+    },
+    "gitlab": {
+      "display_name": "GitLab Inc.",
+      "aliases": [
+        "GitLab"
+      ],
+      "email_domains": [
+        {
+          "domain": "gitlab.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "low",
+          "source_urls": [
+            "https://addtocrm.com/email-format/gitlab",
+            "https://www.clay.com/dossier/gitlab-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Real disagreement across sources: firstinitial+last, FLast, first-only, and hyphenated first-last have each been reported as dominant by different tools."
+        }
+      ]
+    },
+    "discord": {
+      "display_name": "Discord Inc.",
+      "aliases": [
+        "Discord"
+      ],
+      "email_domains": [
+        {
+          "domain": "discord.com",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://aeroleads.com/company/discord-email-format",
+            "https://mailmo.io/email-patterns/email-address-format-of-discord"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Two sources agree on first-name-only; a third (RocketReach) reported a different pattern but under the older discordapp.com domain."
+        }
+      ]
+    },
+    "snap": {
+      "display_name": "Snap Inc.",
+      "aliases": [
+        "Snap",
+        "Snapchat"
+      ],
+      "email_domains": [
+        {
+          "domain": "snap.com",
+          "pattern": "{first}.{last}",
+          "confidence": "low",
+          "source_urls": [
+            "https://addtocrm.com/email-format/snap-inc",
+            "https://leadiq.com/c/snap-inc/5a1d95eb23000054008489cf/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Real disagreement across sources and across related domains (snap.com, snapchat.com, snapinc.net all show up with different dominant patterns) -- treat as a low-confidence guess."
+        }
+      ]
+    },
+    "roblox": {
+      "display_name": "Roblox Corporation",
+      "aliases": [
+        "Roblox"
+      ],
+      "email_domains": [
+        {
+          "domain": "roblox.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/roblox-email-format_b5c45bdbf42e0dea",
+            "https://leadiq.com/c/roblox/5a1d8733240000240061460b/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Good convergence across most sources (48-96%, wide range but consistent pattern)."
+        }
+      ]
+    },
+    "unity": {
+      "display_name": "Unity Software Inc.",
+      "aliases": [
+        "Unity",
+        "Unity Technologies"
+      ],
+      "email_domains": [
+        {
+          "domain": "unity3d.com",
+          "pattern": "{first}{last_initial}",
+          "confidence": "low",
+          "source_urls": [
+            "https://rocketreach.co/unity-email-format_b5c5276ff42e0e2c",
+            "https://leadiq.com/c/unity/5a1d943f5400005b00785255/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Real disagreement across sources (first.last, FirstLast, and first+lastinitial each reported as dominant). Domain is unity3d.com, not unity.com."
+        }
+      ]
+    },
+    "spotify": {
+      "display_name": "Spotify Technology S.A.",
+      "aliases": [
+        "Spotify"
+      ],
+      "email_domains": [
+        {
+          "domain": "spotify.com",
+          "pattern": "{first}{last_initial}",
+          "confidence": "low",
+          "source_urls": [
+            "https://rocketreach.co/spotify-email-format_b5c533bcf42e0e22",
+            "https://skrapp.io/directory/company/spotify.com"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Substantial disagreement across many tools -- first+lastinitial, first-only, and firstinitial+last have all been reported as dominant by different sources."
+        }
+      ]
+    },
+    "newrelic": {
+      "display_name": "New Relic, Inc.",
+      "aliases": [
+        "New Relic"
+      ],
+      "email_domains": [
+        {
+          "domain": "newrelic.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://leadiq.com/c/new-relic/5a1d948f54000052007860d1/email-format",
+            "https://rocketreach.co/new-relic-inc-email-format_b5c098dff42e0867"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most sources checked (67-93%)."
+        }
+      ]
+    },
+    "sentry": {
+      "display_name": "Functional Software, Inc. (Sentry)",
+      "aliases": [
+        "Sentry"
+      ],
+      "email_domains": [
+        {
+          "domain": "sentry.io",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://leadiq.com/c/sentry-sentryio/5a1d9d492300005b008d22de/email-format",
+            "https://rocketreach.co/sentry-sentryio-email-format_b5a41e5ef6d83f49"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Two sources agree on first.last (65-79%)."
+        }
+      ]
+    },
+    "klarna": {
+      "display_name": "Klarna Bank AB",
+      "aliases": [
+        "Klarna"
+      ],
+      "email_domains": [
+        {
+          "domain": "klarna.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://addtocrm.com/email-format/klarna",
+            "https://leadiq.com/c/klarna/5a1d8b1f240000240066230d/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong, unusually consistent convergence across nearly every source checked (81-99.5%)."
+        }
+      ]
+    },
+    "toast": {
+      "display_name": "Toast, Inc.",
+      "aliases": [
+        "Toast"
+      ],
+      "email_domains": [
+        {
+          "domain": "toasttab.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/toast-email-format_b58bc4b6f73716f1"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one independent source found this session (89.6% reported). Domain is toasttab.com, not toast.com."
+        }
+      ]
+    },
+    "gusto": {
+      "display_name": "Gusto, Inc.",
+      "aliases": [
+        "Gusto"
+      ],
+      "email_domains": [
+        {
+          "domain": "gusto.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/gusto-email-format_b5e03b58f42e6fbd",
+            "https://leadiq.com/c/gusto/5a1d9705230000540085a908/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most sources checked (76-95%)."
+        }
+      ]
+    },
+    "justworks": {
+      "display_name": "Justworks, Inc.",
+      "aliases": [
+        "Justworks"
+      ],
+      "email_domains": [
+        {
+          "domain": "justworks.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/justworks-email-format_b5e8402df42e87b4",
+            "https://leadiq.com/c/justworks/5a1d84a224000024005f54ae/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Two sources agree on firstinitial+last (80-85%)."
+        }
+      ]
+    },
+    "draftkings": {
+      "display_name": "DraftKings Inc.",
+      "aliases": [
+        "DraftKings"
+      ],
+      "email_domains": [
+        {
+          "domain": "draftkings.com",
+          "pattern": "{first_initial}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://leadiq.com/c/draftkings-inc/5a1d87fd240000240061d63e/email-format",
+            "https://www.neverbounce.com/company/draftkings/348016779"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Sources agree on a firstinitial+last style pattern but disagree on whether there's a dot separator (jdoe@ vs j.doe@) -- both are common enough to try."
+        }
+      ]
+    },
+    "spacex": {
+      "display_name": "Space Exploration Technologies Corp.",
+      "aliases": [
+        "SpaceX"
+      ],
+      "email_domains": [
+        {
+          "domain": "spacex.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://aeroleads.com/company/spacex-email-format",
+            "https://leadiq.com/c/spacex/5a1d8a932400002400644c15/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Reasonable convergence on first.last across the sources checked (57-97%)."
+        }
+      ]
+    },
+    "tesla": {
+      "display_name": "Tesla, Inc.",
+      "aliases": [
+        "Tesla"
+      ],
+      "email_domains": [
+        {
+          "domain": "tesla.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/tesla-email-format_b5c6251ef42e0caa",
+            "https://leadiq.com/c/tesla/5a1d8aa52400002400648786/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Several sources agree on firstinitial+last (51-76%), though SignalHire reports first+lastinitial as dominant instead."
+        }
+      ]
+    },
+    "anduril": {
+      "display_name": "Anduril Industries, Inc.",
+      "aliases": [
+        "Anduril"
+      ],
+      "email_domains": [
+        {
+          "domain": "anduril.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/anduril-industries-email-format_b44d8d5dfd1baa43",
+            "https://www.clay.com/dossier/anduril-industries-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across the sources checked (88-94%)."
+        }
+      ]
+    },
+    "bostondynamics": {
+      "display_name": "Boston Dynamics, Inc.",
+      "aliases": [
+        "Boston Dynamics"
+      ],
+      "email_domains": [
+        {
+          "domain": "bostondynamics.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://leadiq.com/c/boston-dynamics/5a1d88b02400002400624f01/email-format",
+            "https://rocketreach.co/boston-dynamics-email-format_b5c6aa8cf42e0cf2"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Majority of sources point to firstinitial+last (50-90%), though a couple report a lastname-first-based pattern instead."
+        }
+      ]
+    },
+    "zscaler": {
+      "display_name": "Zscaler, Inc.",
+      "aliases": [
+        "Zscaler"
+      ],
+      "email_domains": [
+        {
+          "domain": "zscaler.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://addtocrm.com/email-format/zscaler",
+            "https://leadiq.com/c/zscaler/5a1d8818240000240061e858/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong, consistent convergence across nearly every source checked (82-97%)."
+        }
+      ]
+    },
+    "auth0": {
+      "display_name": "Auth0 (Okta)",
+      "aliases": [
+        "Auth0"
+      ],
+      "email_domains": [
+        {
+          "domain": "auth0.com",
+          "pattern": "{first}",
+          "confidence": "low",
+          "source_urls": [
+            "https://mailmo.io/email-patterns/email-address-format-of-auth0"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very limited data found this session -- only a passing reference to a first-name-only pattern, no percentage or second source. Auth0 was acquired by Okta in 2021; email conventions may have partially merged with okta.com. Treat as a low-confidence placeholder pending real verification."
+        }
+      ]
+    },
+    "baseten": {
+      "display_name": "Baseten, Inc.",
+      "aliases": [
+        "Baseten"
+      ],
+      "email_domains": [
+        {
+          "domain": "baseten.co",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/baseten-email-format_b7e9cff5c2a8af88",
+            "https://leadiq.com/c/baseten/60a7c0443b112d2d98663d58/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "RocketReach favors first.last (79%), LeadIQ favors first-only (74%) -- moderate disagreement. Domain is baseten.co, not baseten.com (that's an unrelated consulting firm)."
+        }
+      ]
+    },
+    "stackadapt": {
+      "display_name": "StackAdapt Inc.",
+      "aliases": [
+        "StackAdapt"
+      ],
+      "email_domains": [
+        {
+          "domain": "stackadapt.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/stackadapt-email-format_b58ae245f7be3051",
+            "https://leadiq.com/c/stackadapt/5a1d8d9254000053007421db/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "RocketReach, AeroLeads, and LeadIQ all lean toward first.last (69-85%), though ContactOut and SignalHire report other patterns."
+        }
+      ]
+    },
+    "cohere": {
+      "display_name": "Cohere Inc.",
+      "aliases": [
+        "Cohere"
+      ],
+      "email_domains": [
+        {
+          "domain": "cohere.com",
+          "pattern": "{first}",
+          "confidence": "low",
+          "source_urls": [
+            "https://leadiq.com/c/cohere/5eaacfd860fe5627501b7cbf/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Genuine domain confusion in the data this session -- results appeared under cohere.ai, cohere.city, cohere-technologies.com (an unrelated telecom firm), and cohere.live/.network, in addition to the current official cohere.com. The {first} pattern comes from the cohere.ai data (77%), which appears to be Cohere's earlier domain; treat the current cohere.com pattern as an educated guess pending direct verification."
+        }
+      ]
+    },
+    "modal": {
+      "display_name": "Modal Labs, Inc.",
+      "aliases": [
+        "Modal",
+        "Modal Labs"
+      ],
+      "email_domains": [
+        {
+          "domain": "modal.com",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/modal-labs-email-format_b7f2c810c25d9209",
+            "https://www.clay.com/dossier/modal-labs-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "RocketReach and Clay agree on first-name-only (94% and described as standard), though ContactOut reports firstinitial+last instead. Small company (~55 employees per LeadIQ), so data volume is limited either way."
+        }
+      ]
+    },
+    "towerresearch": {
+      "display_name": "Tower Research Capital LLC",
+      "aliases": [
+        "Tower Research Capital",
+        "Tower Research"
+      ],
+      "email_domains": [
+        {
+          "domain": "tower-research.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://aeroleads.com/company/tower-research-capital-email-format",
+            "https://leadiq.com/c/tower-research-capital/5a1d8934240000240062b1fb/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across every source checked (58-84%). Quantitative trading firm -- relevant for SWE/quant-dev recruiting despite not being a 'tech company' in the traditional sense."
+        }
+      ]
+    },
+    "splunk": {
+      "display_name": "Splunk LLC (Cisco)",
+      "aliases": [
+        "Splunk"
+      ],
+      "email_domains": [
+        {
+          "domain": "splunk.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/splunk-email-format_b5c656d0f42e0cb7",
+            "https://webspotter.io/splunk-email-format-zk2r3l"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "RocketReach favors firstinitial+last (68%); another tool favors first-only (44%) -- moderate disagreement. Splunk was acquired by Cisco in 2024, so email conventions could shift toward Cisco's over time."
+        }
+      ]
+    },
+    "intact": {
+      "display_name": "Intact Financial Corporation",
+      "aliases": [
+        "Intact",
+        "Intact Insurance"
+      ],
+      "email_domains": [
+        {
+          "domain": "intactfc.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://aeroleads.com/company/intact-email-format",
+            "https://www.clay.com/dossier/intact-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "AeroLeads and Clay agree on first.last for the correct corporate domain (intactfc.com, confirmed via Wikipedia as Intact Financial Corporation's official site). Ignore intact.net results, which appear to belong to an unrelated Indian financial-services firm, and intact.ca, which is the Canadian retail insurance brand and may use a different convention for customer-facing staff. Large Canadian P&C insurer (~21-32K employees) -- not a 'tech company' per se, but does hire software engineers."
+        }
+      ]
+    },
+    "neetcode": {
+      "display_name": "NeetCode, Inc.",
+      "aliases": [
+        "NeetCode"
+      ],
+      "email_domains": [
+        {
+          "domain": "neetcode.io",
+          "pattern": "{first}.{last}",
+          "confidence": "low",
+          "source_urls": [
+            "https://rocketreach.co/neetcode-email-format_b6e1d218c6fcf82d"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one source found this session (45% reported), consistent with NeetCode's very small size (~35 employees, per RocketReach) -- a coding-interview-prep company founded by Navdeep Singh, not itself a typical SWE-recruiting employer, but included since it appeared in your list."
+        }
+      ]
+    },
+    "sap": {
+      "display_name": "SAP SE",
+      "aliases": [
+        "SAP"
+      ],
+      "email_domains": [
+        {
+          "domain": "sap.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/sap-email-format_b5c61d89f42e0c4a",
+            "https://leadiq.com/c/sap/5a5c7dde550000ef0082b53f/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong, unusually consistent convergence across nearly every source checked (76-99.9%)."
+        }
+      ]
+    },
+    "cisco": {
+      "display_name": "Cisco Systems, Inc.",
+      "aliases": [
+        "Cisco"
+      ],
+      "email_domains": [
+        {
+          "domain": "cisco.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/cisco-email-format_b5c61df5f42e0c4b",
+            "https://addtocrm.com/email-format/cisco"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most sources (54-93%), though one tool (SignalHire) reports a different dominant pattern."
+        }
+      ]
+    },
+    "wayfair": {
+      "display_name": "Wayfair Inc.",
+      "aliases": [
+        "Wayfair"
+      ],
+      "email_domains": [
+        {
+          "domain": "wayfair.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/wayfair-email-format_b5c65443f42e0cb0",
+            "https://addtocrm.com/email-format/wayfair"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong convergence across essentially every source checked (73-99%)."
+        }
+      ]
+    },
+    "riotgames": {
+      "display_name": "Riot Games, Inc.",
+      "aliases": [
+        "Riot Games"
+      ],
+      "email_domains": [
+        {
+          "domain": "riotgames.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://contactout.com/company/riot-games-email-format-1293669",
+            "https://leadiq.com/c/riot-games/5a1d8a192400002400636b75/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across every source checked (70-90%). Bonus: Riot's own careers site confirms recruiters only ever email from @riotgames.com -- useful for spotting recruiting scams."
+        }
+      ]
+    },
+    "ea": {
+      "display_name": "Electronic Arts Inc.",
+      "aliases": [
+        "EA",
+        "Electronic Arts"
+      ],
+      "email_domains": [
+        {
+          "domain": "ea.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://aeroleads.com/company/electronic-arts-email-format",
+            "https://leadiq.com/c/electronic-arts-ea/5a1d8aa5240000240064851c/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across the sources checked (72-94%)."
+        }
+      ]
+    },
+    "snyk": {
+      "display_name": "Snyk Limited",
+      "aliases": [
+        "Snyk"
+      ],
+      "email_domains": [
+        {
+          "domain": "snyk.io",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/snyk-email-format_b55f590cf6898cad",
+            "https://leadiq.com/c/snyk/5a1d9d962300005e008d72c0/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence on the correct snyk.io domain (78-95%); ignore snyk.com results, which show a different, apparently unrelated pattern."
+        }
+      ]
+    },
+    "jfrog": {
+      "display_name": "JFrog Ltd.",
+      "aliases": [
+        "JFrog"
+      ],
+      "email_domains": [
+        {
+          "domain": "jfrog.com",
+          "pattern": "{first}{last_initial}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/jfrog-email-format_b5c0edebf42e08aa",
+            "https://leadiq.com/c/jfrog/5a1d86cb240000240060ee51/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most sources checked (73-87%)."
+        }
+      ]
+    },
+    "wise": {
+      "display_name": "Wise plc",
+      "aliases": [
+        "Wise",
+        "TransferWise"
+      ],
+      "email_domains": [
+        {
+          "domain": "wise.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/wise-email-format_b7ac6d40c53b7eeb",
+            "https://www.neverbounce.com/company/wise/535124415"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Two sources agree on first.last (63-90%), though an older SignalHire snapshot filed under the former name 'TransferWise' shows a different pattern."
+        }
+      ]
+    },
+    "revolut": {
+      "display_name": "Revolut Ltd.",
+      "aliases": [
+        "Revolut"
+      ],
+      "email_domains": [
+        {
+          "domain": "revolut.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://addtocrm.com/email-format/revolut",
+            "https://leadiq.com/c/revolut/5a1d7f4024000024005a70e1/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Most sources lean first.last (69-93%), though a couple of tools (Skrapp, mailmo) report firstinitial+last as dominant instead."
+        }
+      ]
+    },
+    "runway": {
+      "display_name": "Runway AI, Inc.",
+      "aliases": [
+        "Runway",
+        "RunwayML"
+      ],
+      "email_domains": [
+        {
+          "domain": "runwayml.com",
+          "pattern": "{first}",
+          "confidence": "high",
+          "source_urls": [
+            "https://leadiq.com/c/runway/5c3e36982000001fb683ae2c/email-format",
+            "https://www.clay.com/dossier/runway-email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence on first-name-only across most sources (75-96%). Domain is runwayml.com."
+        }
+      ]
+    },
+    "coreweave": {
+      "display_name": "CoreWeave, Inc.",
+      "aliases": [
+        "CoreWeave"
+      ],
+      "email_domains": [
+        {
+          "domain": "coreweave.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/coreweave-email-format_b4281262c1fbeb88",
+            "https://leadiq.com/c/coreweave/5ece8b4a8a998f161e904d0a/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Good convergence on firstinitial+last (71-94%), though SignalHire reports a different dominant pattern."
+        }
+      ]
+    },
+    "groq": {
+      "display_name": "Groq, Inc.",
+      "aliases": [
+        "Groq"
+      ],
+      "email_domains": [
+        {
+          "domain": "groq.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/groq-email-format_b45e0766fc76324e",
+            "https://leadiq.com/c/groq/5c56ba26200000f148bddb0d/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across every source checked (75-92%)."
+        }
+      ]
+    },
+    "instacart": {
+      "display_name": "Maplebear Inc. (Instacart)",
+      "aliases": [
+        "Instacart"
+      ],
+      "email_domains": [
+        {
+          "domain": "instacart.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://aeroleads.com/company/instacart-email-format",
+            "https://leadiq.com/c/instacart/5a1d85992400002400600c43/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Most sources lean first.last (84-96%), though AddToCRM reports first-only as dominant instead."
+        }
+      ]
+    },
+    "etsy": {
+      "display_name": "Etsy, Inc.",
+      "aliases": [
+        "Etsy"
+      ],
+      "email_domains": [
+        {
+          "domain": "etsy.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://aeroleads.com/company/etsy-email-format?page=8"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one strong independent source found this session (89% reported); not cross-verified against a second tool."
+        }
+      ]
+    },
+    "zillow": {
+      "display_name": "Zillow Group, Inc.",
+      "aliases": [
+        "Zillow"
+      ],
+      "email_domains": [
+        {
+          "domain": "zillow.com",
+          "pattern": "{first}{last_initial}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/zillow-email-format_b5c62f74f42e0ca6",
+            "https://leadiq.com/c/zillow/5a1d87392400002400614a3a/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most sources checked (58-98%)."
+        }
+      ]
+    },
+    "redfin": {
+      "display_name": "Redfin Corporation (Rocket Companies)",
+      "aliases": [
+        "Redfin"
+      ],
+      "email_domains": [
+        {
+          "domain": "redfin.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://leadiq.com/c/redfin/5a1d8a052400002400635ddf/email-format",
+            "https://rocketreach.co/redfin-email-format_b5c64ac7f42e0cb5"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence (74-94%). Redfin was acquired by Rocket Companies in 2025."
+        }
+      ]
+    },
+    "expedia": {
+      "display_name": "Expedia Group, Inc.",
+      "aliases": [
+        "Expedia"
+      ],
+      "email_domains": [
+        {
+          "domain": "expedia.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/expediacom-email-format_b5ff532af42d3614",
+            "https://addtocrm.com/email-format/expedia"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong convergence across every source checked (69-97%)."
+        }
+      ]
+    },
+    "bookingcom": {
+      "display_name": "Booking.com B.V.",
+      "aliases": [
+        "Booking.com",
+        "Booking Holdings"
+      ],
+      "email_domains": [
+        {
+          "domain": "booking.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/bookingcom-email-format_b5c63586f42e0c5c",
+            "https://leadiq.com/c/bookingcom/5a1d95932300005100844214/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong, unusually consistent convergence across nearly every source checked (92-99.4%)."
+        }
+      ]
+    },
+    "intel": {
+      "display_name": "Intel Corporation",
+      "aliases": [
+        "Intel"
+      ],
+      "email_domains": [
+        {
+          "domain": "intel.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://rocketreach.co/intel-corporation-email-format_b5c61dcff42e0c4b",
+            "https://leadiq.com/c/intel-corporation/5a1d8aa42400002400648404/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Very strong convergence across every source checked (93-99%)."
+        }
+      ]
+    },
+    "amd": {
+      "display_name": "Advanced Micro Devices, Inc.",
+      "aliases": [
+        "AMD"
+      ],
+      "email_domains": [
+        {
+          "domain": "amd.com",
+          "pattern": "{first}.{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://aeroleads.com/company/amd-email-format",
+            "https://leadiq.com/c/amd/5a1d8aa4240000240064840b/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across the sources checked (62-97%)."
+        }
+      ]
+    },
+    "vmware": {
+      "display_name": "VMware, Inc. (Broadcom)",
+      "aliases": [
+        "VMware"
+      ],
+      "email_domains": [
+        {
+          "domain": "vmware.com",
+          "pattern": "{first_initial}{last}",
+          "confidence": "high",
+          "source_urls": [
+            "https://aeroleads.com/company/vmware-email-format",
+            "https://leadiq.com/c/vmware/5a58e07c5500008101809007/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Strong convergence across most sources (60-93%). VMware was acquired by Broadcom in 2023, which may shift conventions over time."
+        }
+      ]
+    },
+    "dell": {
+      "display_name": "Dell Technologies Inc.",
+      "aliases": [
+        "Dell",
+        "Dell Technologies"
+      ],
+      "email_domains": [
+        {
+          "domain": "dell.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/dell-technologies-email-format_b5202034f9f57d13",
+            "https://leadiq.com/c/dell-technologies/5a1d95d72300005b008480d0/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "RocketReach favors first.last (51%), but LeadIQ favors an underscore variant, First_Last (79%) -- moderate disagreement on the separator."
+        }
+      ]
+    },
+    "asana": {
+      "display_name": "Asana, Inc.",
+      "aliases": [
+        "Asana"
+      ],
+      "email_domains": [
+        {
+          "domain": "asana.com",
+          "pattern": "{first}",
+          "confidence": "low",
+          "source_urls": [
+            "https://mailsfinder.com/email-format/asana",
+            "https://skrapp.io/directory/company/asana.com"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Genuinely scattered across sources -- first-only, FirstLast (no separator), and first.lastinitial have each been reported as dominant by different tools, with no clear winner."
+        }
+      ]
+    },
+    "circle": {
+      "display_name": "Circle Internet Group, Inc.",
+      "aliases": [
+        "Circle"
+      ],
+      "email_domains": [
+        {
+          "domain": "circle.com",
+          "pattern": "{first}.{last}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/circle-email-format_b5f39759f7067287",
+            "https://leadiq.com/c/circle/5a1d9715230000590085b18e/email-format"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "This is the USDC/stablecoin company Circle at circle.com; several unrelated companies share the 'Circle' name with different domains (circle.so, circle.co, trusty.care) so double-check before using. RocketReach and LeadIQ both point to a dominant pattern in the 72-75% range but disagree on the exact separator."
+        }
+      ]
+    },
+    "characterai": {
+      "display_name": "Character Technologies, Inc.",
+      "aliases": [
+        "Character.AI",
+        "Character Technologies"
+      ],
+      "email_domains": [
+        {
+          "domain": "character.ai",
+          "pattern": "{first}",
+          "confidence": "medium",
+          "source_urls": [
+            "https://rocketreach.co/characterai-email-format_b791fa5bc5fd75c9"
+          ],
+          "last_checked": "2026-08-16",
+          "notes": "Only one source found this session (50.6% reported first-name-only); not cross-verified against a second tool."
+        }
+      ]
+    }
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "date": "2026-08-16",
+      "focus": "FAANG, big tech, and prominent late-stage startups",
+      "count": 37
+    },
+    {
+      "batch": 2,
+      "date": "2026-08-16",
+      "focus": "Well-funded private startups similar in profile to Harvey/Ramp: fintech, AI-native companies, dev-tools/SaaS unicorns",
+      "count": 23
+    },
+    {
+      "batch": 3,
+      "date": "2026-08-16",
+      "focus": "More fintech/payments infra, AI labs, and security/enterprise-infra unicorns",
+      "count": 16
+    },
+    {
+      "batch": 4,
+      "date": "2026-08-16",
+      "focus": "Consumer/social, dev tools, more fintech, AI/robotics/defense",
+      "count": 20
+    },
+    {
+      "batch": 5,
+      "date": "2026-08-16",
+      "focus": "User-supplied LinkedIn following list -- new entries only (duplicates and non-company LinkedIn pages excluded)",
+      "count": 8
+    },
+    {
+      "batch": 6,
+      "date": "2026-08-16",
+      "focus": "Big enterprise tech, gaming, dev-tools/security, AI infra, e-commerce",
+      "count": 14
+    },
+    {
+      "batch": 7,
+      "date": "2026-08-16",
+      "focus": "Proptech, travel, semiconductors/enterprise hardware, productivity SaaS, crypto/AI",
+      "count": 11
+    }
+  ],
+  "not_added": {
+    "already_in_database": [
+      "Vanta",
+      "Glean",
+      "Harvey",
+      "Ramp",
+      "Pinterest",
+      "Uber",
+      "DoorDash",
+      "Toast",
+      "Spotify",
+      "Adobe",
+      "Rippling",
+      "Elastic",
+      "CrowdStrike",
+      "Oracle",
+      "Rubrik",
+      "Atlassian",
+      "ServiceNow",
+      "Microsoft",
+      "Datadog",
+      "Stripe",
+      "Salesforce",
+      "Snowflake",
+      "Databricks",
+      "Confluent",
+      "OpenAI",
+      "Amazon",
+      "Google"
+    ],
+    "not_a_separate_company": [
+      "Datadog for Startups (LinkedIn showcase page for Datadog itself)",
+      "Tango / Queens / Zip, a puzzle by LinkedIn (LinkedIn's own in-app games, not external employers)"
+    ],
+    "no_usable_data_found": [
+      "Hilt (searches returned only the unrelated construction company Hilti; the actual small AI startup 'Hilt' was not found in any lead-gen source)",
+      "Tail'ed (no data of any kind found -- could not even confirm the company's domain)",
+      "BIASafe AI (no data of any kind found)",
+      "PearFiction Studios (confirmed to exist -- a Montreal casino-game studio at pearfiction.com -- but no email-pattern data available in any source checked)"
+    ]
+  }
+}
