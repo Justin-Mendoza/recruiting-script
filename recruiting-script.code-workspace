@@ -2,7 +2,7 @@
   "folders": [
 	{
 		"name": "recruiting-script",
-		"path": "../.."
+		"path": "."
 	},
 	{
 		"name": "specs",
